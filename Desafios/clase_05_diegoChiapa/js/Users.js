@@ -1,11 +1,11 @@
-class User {
+class Users {
   constructor({ userName, email, password }) {
     this.userName = userName;
     this.email = email;
     this.password = password;
   }
   createUser() {
-    //? Método que crea un usuario, si no existe
+    //? Método que crea un usuario si no existe
   }
   deleteUser() {
     //? Método que elimina un usuario, si existe
