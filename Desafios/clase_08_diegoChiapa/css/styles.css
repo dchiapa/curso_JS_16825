@@ -207,14 +207,14 @@ main {
   width: 80%;
 }
 /* ----- HOME ----- */
-.home__title {
+.content__title {
   text-align: center;
   width: 100%;
 }
-.home__text {
+.content__text {
   width: 100%;
 }
-.home__btn {
+.content__btn {
   border: none;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 2px gray;
@@ -223,7 +223,8 @@ main {
 }
 /* ----- HOME ----- */
 /* ----- PROFILE ----- */
-.profile {
+.profile,
+.profile__preview {
   align-items: center;
   background: linear-gradient(
     135deg,
@@ -236,8 +237,9 @@ main {
   height: 100%;
   gap: 1rem;
   padding: 1rem 0;
-  width: 30%;
+  width: 100%;
 }
+
 .profile__img {
   background-color: #fff;
   border-radius: 50%;
@@ -252,7 +254,22 @@ main {
   box-shadow: 1px 1px 2px gray;
   width: 80%;
 }
-.message {
+
+@media screen and (min-width: 576px) {
+  .profile {
+    width: 70%;
+  }
+  .profile__preview {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .profile {
+    width: 70%;
+  }
+  .profile__preview {
+    width: 30%;
+  }
 }
 /* ----- PROFILE ----- */
 .home__btn:hover,

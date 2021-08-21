@@ -1,6 +1,6 @@
 class Interface {
   constructor() {
-    this.container = document.querySelector(".home");
+    this.container = document.querySelector(".content");
   }
   showUsers(users) {
     switch (users.length) {
@@ -15,7 +15,7 @@ class Interface {
   loadUsers(users) {
     for (let user of users) {
       this.userProfile = document.createElement("article");
-      this.userProfile.classList.add("profile");
+      this.userProfile.classList.add("profile__preview");
       this.userImg = document.createElement("img");
       this.userImg.classList.add("profile__img");
       this.userImg.src = user.userPicture;
