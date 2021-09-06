@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Clase 11 - Jquery: Selectores</title>
+  </head>
+  <body>
+    <h1>Como usamps JQUERY</h1>
+    <p>En esta aplicacion vamos a ver como utilizar jquery y selectores</p>
+    <form id="formTareas">
+      Nombre: <input type="text" id="nombre" /> Descripcion:
+      <input type="text" id="descripcion" />
+      <button type="button" id="boton">Agregar</button>
+      <button type="button" id="btnGuardar">Guardar</button>
+    </form>
+    <br />
+    <hr />
+    <br />
+    <h2 class="nombre">Lista de tareas</h2>
+    <p>En la siguiente lista se agregan las tareas cargadas</p>
+    <div>
+      <table>
+        <tbody id="tabla-tareas">
+          <tr>
+            <th>ID</th>
+            <th class="nombre">Nombre</th>
+            <th>Descripcion</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
