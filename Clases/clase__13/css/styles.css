@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#caja-prueba{
+    display: none;
+    width: 400px;
+    height: 250px;
+    background-color: greenyellow;
+    padding: 50px;
+    text-align: center;
+}
+
+.caja{
+    width: 400px;
+    height: 250px;
+    background-color: gray;
+    padding: 50px;
+    text-align: center;
+}
+
+#botonera1, #botonera2{
+    margin: 20px;
+    padding: 20px;
+}
