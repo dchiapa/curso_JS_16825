@@ -57,7 +57,7 @@ class Users {
       return this.user;
     }
   }
-  updateUser(userName, userEmail, userPassword, userImage, userLinks) {
+  updateUser(userName, userEmail, userPassword, userImage, userLinks, datos) {
     this.userName = userName;
     this.userEmail = userEmail;
     this.userPassword = userPassword;
@@ -73,22 +73,22 @@ class Users {
             "https://dragonball.guru/wp-content/uploads/2021/03/goku-profile-e1616173641804.png";
         }
         if (this.userName) {
-          if (
-            this.userEmail !== this.user.userEmail ||
-            this.userPassword !== this.user.userPassword ||
-            this.userImage !== this.user.userImage ||
-            this.userLinks !== this.user.userLinks
-          ) {
-            this.user.userEmail = this.userEmail;
-            this.user.userPassword = this.userPassword;
-            this.user.userImage = this.userImage;
-            this.user.userLinks = this.userLinks;
-            this.usersList[this.user.id - 1] = this.user;
-            storage.storageUpdateUsersList();
-            return "Actualizado";
-          } else {
-            return "Iguales";
+          if (datos === "user") {
+            if (
+              this.userEmail === this.user.userEmail &&
+              this.userPassword === this.user.userPassword &&
+              this.userImage === this.user.userImage
+            ) {
+              return "Iguales";
+            }
           }
+          this.user.userEmail = this.userEmail;
+          this.user.userPassword = this.userPassword;
+          this.user.userImage = this.userImage;
+          this.user.userLinks = this.userLinks;
+          this.usersList[this.user.id - 1] = this.user;
+          storage.storageUpdateUsersList();
+          return "Actualizado";
         }
       }
     }

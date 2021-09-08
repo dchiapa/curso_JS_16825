@@ -16,6 +16,7 @@ class Interface {
     for (let user of users) {
       this.userProfile = document.createElement("article");
       this.userProfile.classList.add("profile__preview");
+      this.userProfile.setAttribute("data-user", user.userName);
       this.userImg = document.createElement("img");
       this.userImg.classList.add("profile__img");
       this.userImg.src = user.userImage;

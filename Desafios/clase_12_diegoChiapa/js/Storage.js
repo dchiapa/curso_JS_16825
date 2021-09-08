@@ -1,7 +1,7 @@
 class Storage {
-  storageUpdateUsersList = () =>
+  storageUpdateUsersList = () => {
     localStorage.setItem("usersList", JSON.stringify(this.usersList));
-
+  };
   storageGetUsers = () => {
     this.usersList = localStorage.getItem("usersList");
     switch (this.usersList) {
