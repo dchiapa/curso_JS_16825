@@ -1,6 +1,6 @@
 class Interface {
   constructor() {
-    this.container = document.querySelector(".content");
+    this.container = $(".content");
   }
   showUsers(users) {
     switch (users.length) {
@@ -14,19 +14,19 @@ class Interface {
   }
   loadUsers(users) {
     for (let user of users) {
-      this.userProfile = document.createElement("article");
-      this.userProfile.classList.add("profile__preview");
-      this.userProfile.setAttribute("data-user", user.userName);
-      this.userImg = document.createElement("img");
-      this.userImg.classList.add("profile__img");
-      this.userImg.src = user.userImage;
-      this.userImg.alt = user.userName;
-      this.userName = document.createElement("h2");
-      this.userName.classList.add("profile__title");
-      this.userName.textContent = user.userName;
-      this.userProfile.appendChild(this.userImg);
-      this.userProfile.appendChild(this.userName);
-      this.container.appendChild(this.userProfile);
+      this.userProfile = $("<article></article>");
+      this.userProfile[0].classList.add("profile__preview");
+      this.userProfile[0].setAttribute("data-user", user.userName);
+      this.userImg = $("<img/>");
+      this.userImg[0].classList.add("profile__img");
+      this.userImg[0].src = user.userImage;
+      this.userImg[0].alt = user.userName;
+      this.userName = $("<h2></h2>");
+      this.userName[0].classList.add("profile__title");
+      this.userName[0].textContent = user.userName;
+      this.userProfile[0].append(this.userImg[0]);
+      this.userProfile[0].append(this.userName[0]);
+      this.container.append(this.userProfile[0]);
     }
   }
   loadMessage() {

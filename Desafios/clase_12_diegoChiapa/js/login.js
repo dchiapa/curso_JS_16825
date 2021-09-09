@@ -26,7 +26,7 @@ formBtn.on("click", (e) => {
         });
         lStorage.storageSetUserSession(loggedUser);
         alert("Bienvenido");
-        window.location.href = "userAdminPage.html";
+        window.location.href = "userAdmin.html";
       } else {
         alert("Usuario o contraseña incorrectos");
       }
